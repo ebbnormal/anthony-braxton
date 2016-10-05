@@ -1,0 +1,35 @@
+{
+  "name": "recordingComposition",
+  "plural": "recordingCompositions",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true,
+ "relations": {
+      "composition": {
+        "type": "belongsTo",
+        "model": "Composition",
+        "foreignKey": "compositionId"
+      },
+      "composition": {
+        "type": "belongsTo",
+        "model": "Recording",
+        "foreignKey": "recordingId"
+      }
+    }
+  },
+  "properties": {
+    "recordingId": {
+      "type": "number",
+      "required": true
+    },
+    "compositionId": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

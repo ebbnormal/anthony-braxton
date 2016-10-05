@@ -1,0 +1,36 @@
+{
+  "name": "recording",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true,
+    "relations": {
+      "compositions": {
+        "type": "hasMany",
+        "model": "RecordingComposition",
+        "foreignKey": "recordingId"
+      }
+    }
+  },
+  "properties": {
+    "bootleg": {
+      "type": "boolean",
+      "default": false
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "label": {
+      "type": "string"
+    },
+    "year": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
